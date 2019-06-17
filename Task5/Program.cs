@@ -38,8 +38,8 @@ namespace Task5
             int[] res = new int[0];
             for(int i=0;i<arr.GetLength(0);i++)
             {
-                for (int j = 0; j < arr.GetLength(1); j++)
-                    if (arr[i, j] == arr[i, 0]) ok = true;
+                for (int j = 0; j < arr.GetLength(1); j++) // Every new item in line 
+                    if (arr[i, j] == arr[i, 0]) ok = true; // Is equal to the first one
                     else
                     {
                         ok = false;
@@ -47,7 +47,7 @@ namespace Task5
                     }
                 if (ok)
                 {
-                    Array.Resize(ref res, res.Length + 1);
+                    Array.Resize(ref res, res.Length + 1); // Add line to the array of lines
                     res[res.Length - 1] = i;
                 }
             }
@@ -81,7 +81,7 @@ namespace Task5
             if (result.Length != 0)
                 for (int i = 0; i < result.Length; i++)
                     Console.Write(result[i] + " ");
-            else Console.WriteLine("Очевидно, строк с одинаковыми элементами нет");
+            else Console.WriteLine("Очевидно, строк с равными элементами нет");
 
         }
 
